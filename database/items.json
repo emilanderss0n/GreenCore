@@ -1,0 +1,421 @@
+{
+    "gc_01001_VLTOR_MUR_RECIEVER": {
+        "clone": "59bfe68886f7746004266202",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/recievers/reciever_ar15_vltor_mur-1s_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f764186f77447ec5d7714",
+            "Price": 33679
+        },
+        "locales": {
+            "Name": "AR-15 Vltor MUR-1S 5.56x45 upper receiver (Green)",
+            "Shortname": "MUR-1S",
+            "Description": "MUR-1S modular upper receiver for AR-based weapons by Vltor company. Fitted with mount for attaching additional equipment. Modded Green."
+        },
+        "gcCompatibilities": {
+            "mod_handguard": [
+                "gc_01003_STNGR_HANDGUARD",
+                "gc_01005_DD_FSP_HANDGUARD"
+            ],
+            "mod_scope": [
+                "gc_01012_VORTEX_RAZOR_UH1",
+                "gc_01014_EXPS3"
+            ]
+        }
+    },
+    "gc_01001B_VLTOR_MUR_RECIEVER_2": {
+        "clone": "59bfe68886f7746004266202",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/recievers/reciever_ar15_vltor_mur-1s_green_2.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f764186f77447ec5d7714",
+            "Price": 32679
+        },
+        "locales": {
+            "Name": "AR-15 Vltor MUR-1S 5.56x45 upper receiver (Green)",
+            "Shortname": "MUR-1S",
+            "Description": "MUR-1S modular upper receiver for AR-based weapons by Vltor company. Fitted with mount for attaching additional equipment. Modded Green."
+        },
+        "gcCompatibilities": {
+            "mod_handguard": [
+                "gc_01003_STNGR_HANDGUARD",
+                "gc_01005_DD_FSP_HANDGUARD"
+            ],
+            "mod_scope": [
+                "gc_01012_VORTEX_RAZOR_UH1",
+                "gc_01014_EXPS3"
+            ]
+        }
+    },
+    "gc_01002_KAC_SR25_RECIEVER": {
+        "clone": "5df8e4080b92095fd441e594",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/recievers/reciever_ar10_kac_sr25_upper_std_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f764186f77447ec5d7714",
+            "Price": 6800
+        },
+        "locales": {
+            "Name": "SR-25 7.62x51 upper receiver (Green)",
+            "Shortname": "SR-25",
+            "Description": "Upper receiver for SR-25 rifle manufactured by Knight's Armament Company. Modded Green."
+        },
+        "gcCompatibilities": {
+            "mod_handguard": [
+                "gc_01004_SWS_SPLIT_HANDGUARD"
+            ],
+            "mod_scope": [
+                "gc_01012_VORTEX_RAZOR_UH1",
+                "gc_01014_EXPS3"
+            ]
+        }
+    },
+    "gc_01003_STNGR_HANDGUARD": {
+        "clone": "5c6d5d8b2e221644fc630b39",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/handguards/handguard_ar15_stngr_vypr_m_lok_10_inch_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f75e486f77447ec5d7712",
+            "Price": 14500
+        },
+        "locales": {
+            "Name": "AR-15 STNGR VYPR 10 inch M-LOK handguard (Green)",
+            "Shortname": "VYPR 10",
+            "Description": "The VYPR handguard for AR-15 equipped with an M-LOK interface for the installation of additional devices and accessories. Features a lightweight design and increased ventilation. Manufactured by STNGR. Modded Green."
+        }
+    },
+    "gc_01004_SWS_SPLIT_HANDGUARD": {
+        "clone": "5d00ef6dd7ad1a0940739b16",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/handguards/handguard_ar10_noveske_sws_n6_quadrail_split_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f75e486f77447ec5d7712",
+            "Price": 19200
+        },
+        "locales": {
+            "Name": "AR-10 Noveske SWS N6 Split handguard (Green)",
+            "Shortname": "SWS N6 Split",
+            "Description": "Noveske SWS N6 Split handguard made with light but durable aircraft aluminium alloy. Equipped with 4 mounts for installation of additional devices and accessories. Modded Green."
+        },
+        "gcCompatibilities": {
+            "mod_foregrip": [
+                "gc_01010_BCM_FOREGRIP"
+            ]
+        }
+    },
+    "gc_01005_DD_FSP_HANDGUARD": {
+        "clone": "5c9a26332e2216001219ea70",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/handguards/handguard_ar15_dd_ris_ii_fsp_9,5_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f75e486f77447ec5d7712",
+            "Price": 15800
+        },
+        "locales": {
+            "Name": "AR-15 Daniel Defense RIS II FSP 9.5 handguard (Green)",
+            "Shortname": "RIS II FSP 9.5 CB",
+            "Description": "The Daniel Defense RIS II FSP 9.5 foregrip is a part of the SOPMOD Block II program to replace the standard M4CQBR or Mk18 foregrips in the US SOCOM service. It's made with light but durable aircraft aluminum alloy and comes equipped with 4 mounts for the installation of additional devices and accessories. This foregrip option is incompatible with the M203 UBGL. Modded Green."
+        },
+        "gcCompatibilities": {
+            "mod_foregrip": [
+                "gc_01010_BCM_FOREGRIP"
+            ]
+        }
+    },
+    "gc_01006_SBA_STOCK": {
+        "clone": "628a85ee6b1d481ff772e9d5",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/stocks/stock_ar15_sb_tactical_sba3_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f757486f774093e6cb507",
+            "Price": 8600
+        },
+        "locales": {
+            "Name": "SB Tactical SBA3 brace (Green)",
+            "Shortname": "SBA3",
+            "Description": "The SBA3 Pistol Stabilizing Brace, designed and manufactured by SB Tactical. Installed on AR-15 weapon systems. Modded Green."
+        }
+    },
+    "gc_01007_EMOD_STOCK": {
+        "clone": "5b39f8db5acfc40016387a1b",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/stocks/stock_ar15_vltor_emod_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f757486f774093e6cb507",
+            "Price": 8889
+        },
+        "locales": {
+            "Name": "Vltor EMOD stock (Green)",
+            "Shortname": "EMOD",
+            "Description": "The EMOD buttstock designed for AR-15 weapon systems. Manufactured by Vltor. Modded Green."
+        }
+    },
+    "669d62e4c09c58fdc43eb43d": {
+        "clone": "5aaa5dfee5b5b000140293d3",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/magazines/mag_stanag_magpul_pmag_gen_m3_556x45_30_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f754a86f774094242f19b",
+            "Price": 3113
+        },
+        "locales": {
+            "Name": "5.56x45 Magpul PMAG 30 GEN M3 STANAG 30-round magazine (Green)",
+            "Shortname": "GEN M3",
+            "Description": "30-round polymer Magpul PMAG GEN M3 30 magazine, for 5.56x45 ammunition. Modded Green."
+        }
+    },
+    "gc_01009_F1_PC": {
+        "clone": "6113cc78d3a39d50044c065a",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/pistol grips/pistolgrip_ar15_f1_firearms_st2_pc_skeletonized_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f761f86f774094242f1a1",
+            "Price": 15500
+        },
+        "locales": {
+            "Name": "AR-15 F1 Firearms Skeletonized Style 2 PC pistol grip (Green)",
+            "Shortname": "F1 PC",
+            "Description": "A lightweight ergonomical pistol grip with finger grooves for AR-15 weapon systems, manufactured by F1 Firearms. Wrapped with paracord for maximum comfort and minimum hand slip. Modded Green."
+        }
+    },
+    "gc_01010_BCM_FOREGRIP": {
+        "clone": "5c7fc87d2e221644f31c0298",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/foregrips/foregrip_all_bcm_mod_3_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f71de86f774093f2ecf13",
+            "Price": 4900
+        },
+        "locales": {
+            "Name": "BCM GUNFIGHTER MOD 3 vertical foregrip (Green)",
+            "Shortname": "GF MOD3",
+            "Description": "Lightweight polymer tactical grip produced by BCM. Modded Green."
+        }
+    },
+    "gc_01011_ULTRA_SILENCER": {
+        "clone": "5d44064fa4b9361e4f6eb8b5",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/silencers/silencer_tbac_thunder_beast_ultra_5_762x51_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f731a86f774093e6cb4f9",
+            "Price": 62000
+        },
+        "locales": {
+            "Name": "Thunder Beast Arms Ultra 5 sound suppressor (Green)",
+            "Shortname": "Ultra 5",
+            "Description": "The Ultra 5 sound suppressor is designed for use with 7.62x51 NATO rounds, but also functions as a superb multi-caliber suppressor for multiple hosts, providing excellent performance on 7.62 NATO, .300, 6.8 SPC, 6.5, and 5.56mm NATO. Can only be installed on compatible muzzle devices made by Thunder Beast Arms. Modded Green."
+        }
+    },
+    "gc_01012_VORTEX_RAZOR_UH1": {
+        "clone": "59f9d81586f7744c7506ee62",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/scopes/scope_all_vortex_razor_amg_uh-1_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f742686f774093e6cb4ff",
+            "Price": 25857
+        },
+        "locales": {
+            "Name": "Vortex Razor AMG UH-1 holographic sight (Green)",
+            "Shortname": "UH-1",
+            "Description": "Vortex Razor AMG UH-1 holographic sight is not only about futuristic design, but, according to its creators, is also a revolution among holographic and reflex sights. Modded Green."
+        }
+    },
+    "gc_01013_VUDU_SCOPE": {
+        "clone": "5b3b99475acfc432ff4dcbee",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/scopes/scope_30mm_eotech_vudu_1_6x24_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f748386f774093e6cb501",
+            "Price": 44344
+        },
+        "locales": {
+            "Name": "EOTech Vudu 1-6x24 30mm riflescope (Green)",
+            "Shortname": "VUDU",
+            "Description": "The EOTech Vudu 1-6x24 riflescope, equally effective on AR platforms and bolt-action rifles. Its EOTech-style speed ring reticle is designed for fast target engagement at low power, while delivering the resolution and accuracy needed for longer range targets. Modded Green."
+        }
+    },
+    "gc_01014_EXPS3": {
+        "clone": "558022b54bdc2dac148b458d",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/scopes/scope_all_eotech_exps3_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f742686f774093e6cb4ff",
+            "Price": 29400
+        },
+        "locales": {
+            "Name": "EOTech EXPS3 holographic sight (Green)",
+            "Shortname": "EXPS3",
+            "Description": "Eotech EXPS3 holo sight. Thanks to design features it can be used with a wide range of weapons even with non-folding sights. Compatible with night vision devices by the means of NV reticle mode. Utilized by US SOCOM as a sight for operations in confined spaces. Modded Green."
+        }
+    },
+    "gc_01015_SAKER_SILENCER": {
+        "clone": "60926df0132d4d12c81fd9df",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "mods/silencers/silencer_asr_silencerco_saker_556_556x45_green.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f731a86f774093e6cb4f9",
+            "Price": 62325
+        },
+        "locales": {
+            "Name": "SilencerCo Saker ASR 556 5.56x45 sound suppressor (Green)",
+            "Shortname": "SAKER ASR",
+            "Description": "The Saker ASR 556 sound suppressor, designed for use with 5.56x45 caliber weapon systems. Can be installed on ASR-compatible muzzle devices. Modded Green."
+        }
+    },
+    "gc_1_MDR_556": {
+        "clone": "5c488a752e221602b412af63",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "MDR/weapon_dt_mdr_556x45_container.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f78fc86f77409407a7f90",
+            "Price": 45230
+        },
+        "locales": {
+            "Name": "Desert Tech MDR 5.56x45 assault rifle (Green)",
+            "Shortname": "MDR 5.56",
+            "Description": "The product of the US-based company Desert Tech LLC MDR rifle is a modular, multi-caliber weapon with compact bullpup layout. Barrel lengths and calibers can be changed by the end user within minutes with a minimum amount of tools. Modded Green."
+        }
+    },
+    "gc_2_MDR_762": {
+        "clone": "5dcbd56fdbd3d91b3e5468d5",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "MDR/weapon_dt_mdr_762x51_container.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f78fc86f77409407a7f90",
+            "Price": 63230
+        },
+        "locales": {
+            "Name": "Desert Tech MDR 7.62x51 assault rifle (Green)",
+            "Shortname": "MDR 7.62",
+            "Description": "The product of the US-based company Desert Tech LLC MDR rifle is a modular, multi-caliber weapon with compact bullpup layout. Barrel lengths and calibers can be changed by the end user within minutes with a minimum amount of tools. Modded Green."
+        }
+    },
+    "gc_3_M4A1_green": {
+        "clone": "5447a9cd4bdc2dbd208b4567",
+        "enable": true,
+        "items": {
+            "_props": {
+                "Prefab": {
+                    "path": "M4A1_GREEN/weapon_colt_m4a1_556x45_container.bundle"
+                }
+            }
+        },
+        "handbook": {
+            "ParentId": "5b5f78fc86f77409407a7f90",
+            "Price": 40000
+        },
+        "locales": {
+            "Name": "Colt M4A1 5.56x45 assault rifle (Green)",
+            "Shortname": "M4A1",
+            "Description": "The Colt M4A1 carbine is a fully automatic variant of the basic M4 Carbine and was primarily designed for special operations use. However, U.S. Special Operations Command (USSOCOM) was soon to adopt the M4A1 for almost all special operations units, followed later by general introduction of the M4A1 into service with the U.S. Army and Marine Corps. Modded Green."
+        }
+    }
+}
