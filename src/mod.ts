@@ -3,69 +3,89 @@ import { IPostDBLoadMod }       from "@spt/models/external/IPostDBLoadMod";
 import { DatabaseServer }       from "@spt/servers/DatabaseServer";
 import { ImporterUtil }         from "@spt/utils/ImporterUtil";
 import { ILogger }              from "@spt/models/spt/utils/ILogger";
-import { ICoreDatabase }        from "@spt/atlas/ICoreDatabase";
 import { PreSptModLoader }      from "@spt/loaders/PreSptModLoader";
 import { IDatabaseTables }      from "@spt/models/spt/server/IDatabaseTables";
 import { JsonUtil }             from "@spt/utils/JsonUtil"
 
 
+interface IHandbookEntry {
+    Id: string;
+    ParentId: string;
+    Price: number;
+}
+
 class GreenCore implements IPostDBLoadMod 
 {
     private db:         IDatabaseTables;
-    private mydb:       ICoreDatabase;
+    private mydb:       any;
     private logger:     ILogger;
     private jsonUtil:   JsonUtil;
 
     public postDBLoad(container: DependencyContainer): void 
     {
-        this.logger =               container.resolve<ILogger>("WinstonLogger");
-        this.jsonUtil =             container.resolve<JsonUtil>("JsonUtil");
+        try {
+            this.logger =               container.resolve<ILogger>("WinstonLogger");
+            this.jsonUtil =             container.resolve<JsonUtil>("JsonUtil");
 
-        const databaseServer =      container.resolve<DatabaseServer>("DatabaseServer");
-        const databaseImporter =    container.resolve<ImporterUtil>("ImporterUtil");
-        const modLoader =           container.resolve<PreSptModLoader>("PreSptModLoader");
+            const databaseServer =      container.resolve<DatabaseServer>("DatabaseServer");
+            const databaseImporter =    container.resolve<ImporterUtil>("ImporterUtil");
+            const modLoader =           container.resolve<PreSptModLoader>("PreSptModLoader");
 
-        const modFolderName =   "MoxoPixel-GreenCore";
+            const modFolderName =   "MoxoPixel-GreenCore";
 
-        const traders = {
-            "painter":     "668aaff35fd574b6dcc4a686"
-        };
+            const traders = {
+                "painter":     "668aaff35fd574b6dcc4a686"
+            };
 
-        this.db = databaseServer.getTables();
-        this.mydb = databaseImporter.loadRecursive(`${modLoader.getModPath(modFolderName)}database/`);
+            this.db = databaseServer.getTables();
+            this.mydb = databaseImporter.loadRecursive(`${modLoader.getModPath(modFolderName)}database/`);
 
-        for (const newItem in this.mydb.items)
-        {
-            this.cloneItem(this.mydb.items[newItem].clone, newItem);
-            this.addCompatibilitiesAndConflicts(this.mydb.items[newItem].clone, newItem);
-        
-            const newItemLocales = this.mydb.items[newItem].locales;
-            for (const lang in this.db.locales.global) 
-            {
-                this.db.locales.global[lang][`${newItem} Name`] = newItemLocales.Name;
-                this.db.locales.global[lang][`${newItem} ShortName`] = newItemLocales.Shortname;
-                this.db.locales.global[lang][`${newItem} Description`] = newItemLocales.Description;
+            if (!this.db || !this.mydb) {
+                throw new Error("Failed to load required databases");
             }
-        }
-        for (const trader in traders) this.addTraderAssort(traders[trader]);
 
-        const dbMastering = this.db.globals.config.Mastering;
-        for (const weapon in dbMastering)
-        {
-            if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("gc_1_MDR_556");
-            if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("gc_2_MDR_762");
-            if (dbMastering[weapon].Name == "M4") dbMastering[weapon].Templates.push("gc_3_M4A1_green");
-        }
+            for (const newItem in this.mydb.items) {
+                this.cloneItem(this.mydb.items[newItem].clone, newItem);
+                this.addCompatibilitiesAndConflicts(this.mydb.items[newItem].clone, newItem);
+            
+                const newItemLocales = this.mydb.items[newItem].locales;
+                for (const lang in this.db.locales.global) {
+                    this.db.locales.global[lang][`${newItem} Name`] = newItemLocales.Name;
+                    this.db.locales.global[lang][`${newItem} ShortName`] = newItemLocales.Shortname;
+                    this.db.locales.global[lang][`${newItem} Description`] = newItemLocales.Description;
+                }
+            }
 
-        this.logger.info("------------------------");
-        this.logger.info("Green Core Loaded");
+            for (const trader in traders) this.addTraderAssort(traders[trader]);
+
+            const dbMastering = this.db.globals.config.Mastering;
+            for (const weapon in dbMastering) {
+                if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("gc_1_MDR_556");
+                if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("gc_2_MDR_762");
+                if (dbMastering[weapon].Name == "M4") dbMastering[weapon].Templates.push("gc_3_M4A1_green");
+            }
+
+            this.logger.info("------------------------");
+            this.logger.info("Green Core Loaded");
+        } catch (error) {   
+            this.logger.error(`Error loading GreenCore mod: ${error.message}`);
+        }
     
     }
 
     private cloneItem(itemToClone: string, greenCoreID: string): void
     {
-        if ( this.mydb.items[greenCoreID].enable == true )
-        {
+        if (!itemToClone || !greenCoreID) {
+            this.logger.error("Invalid parameters passed to cloneItem");
+            return;
+        }
+
+        if (!this.db.templates.items[itemToClone]) {
+            this.logger.error(`Template item ${itemToClone} not found`);
+            return;
+        }
+
+        if ( this.mydb.items[greenCoreID].enable == true ) {
             let greenCoreItemOut = this.jsonUtil.clone(this.db.templates.items[itemToClone]);
 
             greenCoreItemOut._id = greenCoreID;
@@ -73,10 +93,8 @@ class GreenCore implements IPostDBLoadMod
 
             const gcCompatibilities: object = (typeof this.mydb.items[greenCoreID].gcCompatibilities == "undefined") ? {} : this.mydb.items[greenCoreID].gcCompatibilities;
             const gcConflicts: Array<string> = (typeof this.mydb.items[greenCoreID].gcConflicts == "undefined")      ? [] : this.mydb.items[greenCoreID].gcConflicts;
-            for (const modSlotName in gcCompatibilities)
-            {
-                for (const slot of greenCoreItemOut._props.Slots)
-                {
+            for (const modSlotName in gcCompatibilities) {
+                for (const slot of greenCoreItemOut._props.Slots) {
                     if ( slot._name === modSlotName ) for (const id of gcCompatibilities[modSlotName]) slot._props.filters[0].Filter.push(id);
                 }
             }
@@ -84,7 +102,7 @@ class GreenCore implements IPostDBLoadMod
 
             this.db.templates.items[greenCoreID] = greenCoreItemOut;
 
-            const handbookEntry = {
+            const handbookEntry: IHandbookEntry = {
                 "Id": greenCoreID,
                 "ParentId": this.mydb.items[greenCoreID]["handbook"]["ParentId"],
                 "Price": this.mydb.items[greenCoreID]["handbook"]["Price"]
@@ -96,10 +114,8 @@ class GreenCore implements IPostDBLoadMod
 
     private compareAndReplace(originalItem, attributesToChange)
     {
-        for (const key in attributesToChange)
-        {
-            if ( (["boolean", "string", "number"].includes(typeof attributesToChange[key])) || Array.isArray(attributesToChange[key]) )
-            {
+        for (const key in attributesToChange) {
+            if ( (["boolean", "string", "number"].includes(typeof attributesToChange[key])) || Array.isArray(attributesToChange[key]) ) {
                 if ( key in originalItem ) originalItem[key] = attributesToChange[key];
                 else this.logger.error("Error finding the attribute: \"" + key + "\", default value is used instead.");
             } 
@@ -111,8 +127,7 @@ class GreenCore implements IPostDBLoadMod
 
     private addCompatibilitiesAndConflicts(itemClone: string, greenCoreID: string): void
     {
-        for (const item in this.db.templates.items)
-        {
+        for (const item in this.db.templates.items) {
             if ( item in this.mydb.items ) continue;
             
             const slots = (typeof this.db.templates.items[item]._props.Slots === "undefined")            ? [] : this.db.templates.items[item]._props.Slots;
@@ -120,10 +135,8 @@ class GreenCore implements IPostDBLoadMod
             const cartridges = (typeof this.db.templates.items[item]._props.Cartridges === "undefined")  ? [] : this.db.templates.items[item]._props.Cartridges;
             const combined = slots.concat(chambers, cartridges)
 
-            for (const entry of combined)
-            {
-                for (const id of entry._props.filters[0].Filter)
-                {
+            for (const entry of combined) {
+                for (const id of entry._props.filters[0].Filter) {
                     if ( id === itemClone ) entry._props.filters[0].Filter.push(greenCoreID);
                 }
             }
@@ -135,18 +148,20 @@ class GreenCore implements IPostDBLoadMod
 
     private addTraderAssort(trader: string): void 
     {
-        for (const item in this.mydb.traders[trader].assort.items) 
-        {
+        if (!this.db.traders[trader]?.assort || !this.mydb.traders[trader]?.assort) {
+            this.logger.error(`Invalid trader assort data for trader: ${trader}`);
+            return;
+        }
+
+        for (const item in this.mydb.traders[trader].assort.items) {
             this.db.traders[trader].assort.items.push(this.mydb.traders[trader].assort.items[item]);
         }
 
-        for (const item in this.mydb.traders[trader].assort.barter_scheme) 
-        {
+        for (const item in this.mydb.traders[trader].assort.barter_scheme) {
             this.db.traders[trader].assort.barter_scheme[item] = this.mydb.traders[trader].assort.barter_scheme[item];
         }
 
-        for (const item in this.mydb.traders[trader].assort.loyal_level_items) 
-        {
+        for (const item in this.mydb.traders[trader].assort.loyal_level_items) {
             this.db.traders[trader].assort.loyal_level_items[item] = this.mydb.traders[trader].assort.loyal_level_items[item];
         }
     }

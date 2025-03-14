@@ -1,5 +1,5 @@
 {
-    "gc_01001_VLTOR_MUR_RECIEVER": {
+    "67c263a4da87832028bdde4c": {
         "clone": "59bfe68886f7746004266202",
         "enable": true,
         "items": {
@@ -20,16 +20,16 @@
         },
         "gcCompatibilities": {
             "mod_handguard": [
-                "gc_01003_STNGR_HANDGUARD",
-                "gc_01005_DD_FSP_HANDGUARD"
+                "67c263a4da87832028bdde4f",
+                "67c263a4da87832028bdde51"
             ],
             "mod_scope": [
-                "gc_01012_VORTEX_RAZOR_UH1",
-                "gc_01014_EXPS3"
+                "67c263a4da87832028bdde58",
+                "67c263a4da87832028bdde5a"
             ]
         }
     },
-    "gc_01001B_VLTOR_MUR_RECIEVER_2": {
+    "67c263a4da87832028bdde4d": {
         "clone": "59bfe68886f7746004266202",
         "enable": true,
         "items": {
@@ -50,16 +50,16 @@
         },
         "gcCompatibilities": {
             "mod_handguard": [
-                "gc_01003_STNGR_HANDGUARD",
-                "gc_01005_DD_FSP_HANDGUARD"
+                "67c263a4da87832028bdde4f",
+                "67c263a4da87832028bdde51"
             ],
             "mod_scope": [
-                "gc_01012_VORTEX_RAZOR_UH1",
-                "gc_01014_EXPS3"
+                "67c263a4da87832028bdde58",
+                "67c263a4da87832028bdde5a"
             ]
         }
     },
-    "gc_01002_KAC_SR25_RECIEVER": {
+    "67c263a4da87832028bdde4e": {
         "clone": "5df8e4080b92095fd441e594",
         "enable": true,
         "items": {
@@ -80,15 +80,15 @@
         },
         "gcCompatibilities": {
             "mod_handguard": [
-                "gc_01004_SWS_SPLIT_HANDGUARD"
+                "67c263a4da87832028bdde50"
             ],
             "mod_scope": [
-                "gc_01012_VORTEX_RAZOR_UH1",
-                "gc_01014_EXPS3"
+                "67c263a4da87832028bdde58",
+                "67c263a4da87832028bdde5a"
             ]
         }
     },
-    "gc_01003_STNGR_HANDGUARD": {
+    "67c263a4da87832028bdde4f": {
         "clone": "5c6d5d8b2e221644fc630b39",
         "enable": true,
         "items": {
@@ -108,7 +108,7 @@
             "Description": "The VYPR handguard for AR-15 equipped with an M-LOK interface for the installation of additional devices and accessories. Features a lightweight design and increased ventilation. Manufactured by STNGR. Modded Green."
         }
     },
-    "gc_01004_SWS_SPLIT_HANDGUARD": {
+    "67c263a4da87832028bdde50": {
         "clone": "5d00ef6dd7ad1a0940739b16",
         "enable": true,
         "items": {
@@ -129,11 +129,11 @@
         },
         "gcCompatibilities": {
             "mod_foregrip": [
-                "gc_01010_BCM_FOREGRIP"
+                "67c263a4da87832028bdde56"
             ]
         }
     },
-    "gc_01005_DD_FSP_HANDGUARD": {
+    "67c263a4da87832028bdde51": {
         "clone": "5c9a26332e2216001219ea70",
         "enable": true,
         "items": {
@@ -154,11 +154,11 @@
         },
         "gcCompatibilities": {
             "mod_foregrip": [
-                "gc_01010_BCM_FOREGRIP"
+                "67c263a4da87832028bdde56"
             ]
         }
     },
-    "gc_01006_SBA_STOCK": {
+    "67c263a4da87832028bdde52": {
         "clone": "628a85ee6b1d481ff772e9d5",
         "enable": true,
         "items": {
@@ -178,7 +178,7 @@
             "Description": "The SBA3 Pistol Stabilizing Brace, designed and manufactured by SB Tactical. Installed on AR-15 weapon systems. Modded Green."
         }
     },
-    "gc_01007_EMOD_STOCK": {
+    "67c263a4da87832028bdde53": {
         "clone": "5b39f8db5acfc40016387a1b",
         "enable": true,
         "items": {
@@ -198,7 +198,7 @@
             "Description": "The EMOD buttstock designed for AR-15 weapon systems. Manufactured by Vltor. Modded Green."
         }
     },
-    "669d62e4c09c58fdc43eb43d": {
+    "67c263a4da87832028bdde54": {
         "clone": "5aaa5dfee5b5b000140293d3",
         "enable": true,
         "items": {
@@ -218,7 +218,7 @@
             "Description": "30-round polymer Magpul PMAG GEN M3 30 magazine, for 5.56x45 ammunition. Modded Green."
         }
     },
-    "gc_01009_F1_PC": {
+    "67c263a4da87832028bdde55": {
         "clone": "6113cc78d3a39d50044c065a",
         "enable": true,
         "items": {
@@ -238,7 +238,7 @@
             "Description": "A lightweight ergonomical pistol grip with finger grooves for AR-15 weapon systems, manufactured by F1 Firearms. Wrapped with paracord for maximum comfort and minimum hand slip. Modded Green."
         }
     },
-    "gc_01010_BCM_FOREGRIP": {
+    "67c263a4da87832028bdde56": {
         "clone": "5c7fc87d2e221644f31c0298",
         "enable": true,
         "items": {
@@ -258,7 +258,7 @@
             "Description": "Lightweight polymer tactical grip produced by BCM. Modded Green."
         }
     },
-    "gc_01011_ULTRA_SILENCER": {
+    "67c263a4da87832028bdde57": {
         "clone": "5d44064fa4b9361e4f6eb8b5",
         "enable": true,
         "items": {
@@ -278,7 +278,7 @@
             "Description": "The Ultra 5 sound suppressor is designed for use with 7.62x51 NATO rounds, but also functions as a superb multi-caliber suppressor for multiple hosts, providing excellent performance on 7.62 NATO, .300, 6.8 SPC, 6.5, and 5.56mm NATO. Can only be installed on compatible muzzle devices made by Thunder Beast Arms. Modded Green."
         }
     },
-    "gc_01012_VORTEX_RAZOR_UH1": {
+    "67c263a4da87832028bdde58": {
         "clone": "59f9d81586f7744c7506ee62",
         "enable": true,
         "items": {
@@ -298,7 +298,7 @@
             "Description": "Vortex Razor AMG UH-1 holographic sight is not only about futuristic design, but, according to its creators, is also a revolution among holographic and reflex sights. Modded Green."
         }
     },
-    "gc_01013_VUDU_SCOPE": {
+    "67c263a4da87832028bdde59": {
         "clone": "5b3b99475acfc432ff4dcbee",
         "enable": true,
         "items": {
@@ -318,7 +318,7 @@
             "Description": "The EOTech Vudu 1-6x24 riflescope, equally effective on AR platforms and bolt-action rifles. Its EOTech-style speed ring reticle is designed for fast target engagement at low power, while delivering the resolution and accuracy needed for longer range targets. Modded Green."
         }
     },
-    "gc_01014_EXPS3": {
+    "67c263a4da87832028bdde5a": {
         "clone": "558022b54bdc2dac148b458d",
         "enable": true,
         "items": {
@@ -338,7 +338,7 @@
             "Description": "Eotech EXPS3 holo sight. Thanks to design features it can be used with a wide range of weapons even with non-folding sights. Compatible with night vision devices by the means of NV reticle mode. Utilized by US SOCOM as a sight for operations in confined spaces. Modded Green."
         }
     },
-    "gc_01015_SAKER_SILENCER": {
+    "67c263a4da87832028bdde5b": {
         "clone": "60926df0132d4d12c81fd9df",
         "enable": true,
         "items": {
@@ -358,7 +358,7 @@
             "Description": "The Saker ASR 556 sound suppressor, designed for use with 5.56x45 caliber weapon systems. Can be installed on ASR-compatible muzzle devices. Modded Green."
         }
     },
-    "gc_1_MDR_556": {
+    "67c263a4da87832028bdde5c": {
         "clone": "5c488a752e221602b412af63",
         "enable": true,
         "items": {
@@ -378,7 +378,7 @@
             "Description": "The product of the US-based company Desert Tech LLC MDR rifle is a modular, multi-caliber weapon with compact bullpup layout. Barrel lengths and calibers can be changed by the end user within minutes with a minimum amount of tools. Modded Green."
         }
     },
-    "gc_2_MDR_762": {
+    "67c263a4da87832028bdde5d": {
         "clone": "5dcbd56fdbd3d91b3e5468d5",
         "enable": true,
         "items": {
@@ -398,7 +398,7 @@
             "Description": "The product of the US-based company Desert Tech LLC MDR rifle is a modular, multi-caliber weapon with compact bullpup layout. Barrel lengths and calibers can be changed by the end user within minutes with a minimum amount of tools. Modded Green."
         }
     },
-    "gc_3_M4A1_green": {
+    "67c263a4da87832028bdde5e": {
         "clone": "5447a9cd4bdc2dbd208b4567",
         "enable": true,
         "items": {
