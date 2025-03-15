@@ -1,6 +1,6 @@
 {
     "name": "Green Core",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "main": "src/mod.js",
     "license": "University of Illinois/NCSA Open Source License",
     "author": "MoxoPixel",

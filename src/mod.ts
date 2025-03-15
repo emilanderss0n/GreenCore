@@ -7,7 +7,6 @@ import { PreSptModLoader }      from "@spt/loaders/PreSptModLoader";
 import { IDatabaseTables }      from "@spt/models/spt/server/IDatabaseTables";
 import { JsonUtil }             from "@spt/utils/JsonUtil"
 
-
 interface IHandbookEntry {
     Id: string;
     ParentId: string;
@@ -60,9 +59,32 @@ class GreenCore implements IPostDBLoadMod
 
             const dbMastering = this.db.globals.config.Mastering;
             for (const weapon in dbMastering) {
-                if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("gc_1_MDR_556");
-                if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("gc_2_MDR_762");
-                if (dbMastering[weapon].Name == "M4") dbMastering[weapon].Templates.push("gc_3_M4A1_green");
+                if (dbMastering[weapon].Name == "MDR") dbMastering[weapon].Templates.push("67c263a4da87832028bdde5c", "67c263a4da87832028bdde5d");
+                if (dbMastering[weapon].Name == "M4") dbMastering[weapon].Templates.push("67c263a4da87832028bdde5e");
+            }
+
+            const dbQuests = this.db.templates.quests;
+            for (const M4Quest in dbQuests) {
+                if (
+                    dbQuests[M4Quest]._id === "5a27bb8386f7741c770d2d0a" ||
+                    dbQuests[M4Quest]._id === "5c0d4c12d09282029f539173" ||
+                    dbQuests[M4Quest]._id === "63a9b229813bba58a50c9ee5" ||
+                    dbQuests[M4Quest]._id === "64e7b9bffd30422ed03dad38" ||
+                    dbQuests[M4Quest]._id === "666314b4d7f171c4c20226c3"
+                ) {
+                    const availableForFinish = dbQuests[M4Quest].conditions.AvailableForFinish;
+                    for (const condition of availableForFinish) {
+                        if (condition.counter && condition.counter.conditions) {
+                            for (const counterCondition of condition.counter.conditions) {
+                                if (counterCondition.weapon) {
+                                    counterCondition.weapon.push(
+                                        "67c263a4da87832028bdde5e",
+                                    );
+                                }
+                            }
+                        }
+                    }   
+                }
             }
 
             this.logger.info("------------------------");
@@ -77,6 +99,10 @@ class GreenCore implements IPostDBLoadMod
     {
         if (!itemToClone || !greenCoreID) {
             this.logger.error("Invalid parameters passed to cloneItem");
+            return;
+        }
+
+        if (!this.mydb.items[greenCoreID]?.enable) {
             return;
         }
 
